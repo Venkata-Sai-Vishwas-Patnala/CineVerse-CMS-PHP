@@ -1,0 +1,15 @@
+RewriteEngine On
+
+# Route all /api/* requests to the PHP backend
+RewriteCond %{REQUEST_URI} /api/
+RewriteRule ^api/(.*)$ backend/index.php [QSA,L]
+
+# Serve uploaded files directly
+RewriteCond %{REQUEST_URI} /uploads/
+RewriteRule ^uploads/(.*)$ public/uploads/$1 [L]
+
+# Serve index.html for all other requests (SPA routing)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.html [L]
+

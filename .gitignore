@@ -1,0 +1,19 @@
+node_modules/
+dist/
+.env
+.env.local
+.DS_Store
+*.log
+.vscode/
+.idea/
+*.swp
+*.swo
+public/uploads/posters/*
+public/uploads/backdrops/*
+public/uploads/avatars/*
+!public/uploads/posters/.gitkeep
+!public/uploads/backdrops/.gitkeep
+!public/uploads/avatars/.gitkeep
+cine.zip
+CMS Website Design for Cineverse.zip
+cineverse-setup.php
