@@ -30,6 +30,22 @@ A complete movie review and content management system built with **React + Vite 
 - ✅ User management
 - ✅ Bulk operations
 
+## Screenshots
+### Homepage
+<img width="1434" height="910" alt="Screenshot 2026-05-25 002114" src="https://github.com/user-attachments/assets/287efa6e-8a88-44db-af97-0114d5ecd48b" />
+
+### Overview page
+<img width="1432" height="903" alt="Screenshot 2026-05-25 002142" src="https://github.com/user-attachments/assets/9094ced5-4a27-4ae4-8ad3-e6aa3238700a" />
+
+### Trending page
+<img width="1432" height="821" alt="Screenshot 2026-05-25 002221" src="https://github.com/user-attachments/assets/069e837c-6378-436e-bbda-8ce152e3ee41" />
+
+### Genre page
+<img width="1426" height="910" alt="Screenshot 2026-05-25 002242" src="https://github.com/user-attachments/assets/66197609-2624-4568-a21a-7035c60c2cf6" />
+
+### Admin Dashboard
+<img width="1431" height="911" alt="Screenshot 2026-05-25 002159" src="https://github.com/user-attachments/assets/0464f3d0-0215-4de6-b5be-f7c8c7a10144" />
+
 ## 📋 Prerequisites
 
 - **XAMPP** (Apache + MySQL + PHP 8.0+)
