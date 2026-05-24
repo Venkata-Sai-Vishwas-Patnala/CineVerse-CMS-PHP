@@ -14,26 +14,79 @@
 ## 📸 Project Showcase
 
 ### 🏠 Home Page - Featured Movies & Trending Section
-![CineVerse Home Page](https://via.placeholder.com/1200x600?text=CineVerse+Home+Page)
-*Browse featured movies with dynamic hero section and trending carousel*
+![CineVerse Home Page](./screenshots/home-page.png)
+
+**Key Features:**
+- ✨ Dynamic hero section with featured movie
+- 🎬 Trending movies carousel
+- 🔍 Search and filter functionality
+- 📂 Category browsing
+- 🎨 Modern dark theme UI
+- 📱 Fully responsive design
 
 ---
 
 ### 🎥 Movie Details Page
-![Movie Details](https://via.placeholder.com/1200x600?text=Movie+Details+Page)
-*Comprehensive movie information with reviews, ratings, and streaming availability*
+![Movie Details](./screenshots/movie-details.png)
+
+**Key Features:**
+- 📝 Complete movie information (director, cast, duration)
+- ⭐ Star ratings and review system
+- 💬 User reviews and comments
+- 📺 Streaming platform availability
+- ➕ Add to watchlist button
+- 🎞️ Movie poster and backdrop images
 
 ---
 
-### 👨‍💼 Admin Dashboard
-![Admin Dashboard](https://via.placeholder.com/1200x600?text=Admin+Dashboard)
-*Manage movies, users, categories, and view platform statistics*
+### 👨💼 Admin Dashboard
+![Admin Dashboard](./screenshots/admin-dashboard.png)
+
+**Key Features:**
+- 📊 Dashboard statistics (total movies, users, reviews)
+- 🎬 Movie management (add, edit, delete)
+- 👥 User management
+- 📂 Category management
+- 📈 Analytics and insights
+- 🔧 Admin controls and permissions
 
 ---
 
 ### 👤 User Profile & Watchlist
-![User Profile](https://via.placeholder.com/1200x600?text=User+Profile+%26+Watchlist)
-*Personalized watchlist and profile management*
+![User Profile](./screenshots/user-profile.png)
+
+**Key Features:**
+- 👤 User profile information
+- 📋 Personal watchlist management
+- ⭐ My reviews and ratings
+- ✏️ Edit profile option
+- 🔐 Password change
+- 📊 User statistics
+
+---
+
+### 🔐 Login & Authentication
+![Login Page](./screenshots/login-page.png)
+
+**Key Features:**
+- 🔑 Secure login form
+- 📝 Registration form
+- 🔐 Password security
+- ✅ Form validation
+- 🎨 Modern UI design
+
+---
+
+### 🔍 Search & Filter Results
+![Search Results](./screenshots/search-results.png)
+
+**Key Features:**
+- 🔎 Search by title, director, cast
+- 📂 Filter by category/genre
+- 📅 Filter by year
+- ⭐ Sort by rating
+- 📊 Pagination
+- 🎬 Movie grid display
 
 ---
 
@@ -116,7 +169,7 @@ npm run dev
 CineVerse/
 ├── 📂 backend/                    # PHP Backend
 │   ├── 📂 api/                   # API Endpoints
-│   │   ├── auth.php              # Authentication (login, register, profile)
+│   │   ├── auth.php              # Authentication
 │   │   ├── movies.php            # Movie CRUD & search
 │   │   ├── reviews.php           # Review management
 │   │   ├── categories.php        # Category management
@@ -132,22 +185,8 @@ CineVerse/
 ├── 📂 src/                       # React Frontend
 │   ├── 📂 app/
 │   │   ├── 📂 components/        # Reusable components
-│   │   │   ├── Navbar.tsx
-│   │   │   ├── HeroSection.tsx
-│   │   │   ├── MovieCard.tsx
-│   │   │   ├── Categories.tsx
-│   │   │   ├── TrendingMovies.tsx
-│   │   │   ├── AddMovieForm.tsx
-│   │   │   └── Footer.tsx
 │   │   ├── 📂 pages/             # Page components
-│   │   │   ├── HomePage.tsx
-│   │   │   ├── MovieDetails.tsx
-│   │   │   ├── LoginPage.tsx
-│   │   │   ├── ProfilePage.tsx
-│   │   │   ├── AdminDashboard.tsx
-│   │   │   └── NotFound.tsx
 │   │   ├── 📂 context/           # React Context
-│   │   │   └── AuthContext.tsx
 │   │   └── routes.tsx            # Route definitions
 │   ├── 📂 lib/
 │   │   └── api.ts                # API client
@@ -155,9 +194,6 @@ CineVerse/
 │
 ├── 📂 public/
 │   └── 📂 uploads/               # User uploads
-│       ├── posters/
-│       ├── backdrops/
-│       └── avatars/
 │
 ├── .htaccess                     # Apache routing
 ├── vite.config.ts                # Vite configuration
@@ -169,56 +205,56 @@ CineVerse/
 ## 🔌 API Documentation
 
 ### Authentication Endpoints
-| Method | Endpoint | Description | Auth |
-|--------|----------|-------------|------|
-| POST | `/api/auth/register` | Register new user | ❌ |
-| POST | `/api/auth/login` | User login | ❌ |
-| POST | `/api/auth/logout` | User logout | ✅ |
-| GET | `/api/auth/me` | Get current user | ✅ |
-| PUT | `/api/auth/profile` | Update profile | ✅ |
-| PUT | `/api/auth/password` | Change password | ✅ |
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | `/api/auth/register` | Register new user |
+| POST | `/api/auth/login` | User login |
+| POST | `/api/auth/logout` | User logout |
+| GET | `/api/auth/me` | Get current user |
+| PUT | `/api/auth/profile` | Update profile |
+| PUT | `/api/auth/password` | Change password |
 
 ### Movie Endpoints
-| Method | Endpoint | Description | Auth |
-|--------|----------|-------------|------|
-| GET | `/api/movies` | List movies (with filters) | ❌ |
-| GET | `/api/movies/featured` | Get featured movie | ❌ |
-| GET | `/api/movies/trending` | Get trending movies | ❌ |
-| GET | `/api/movies/{id}` | Get movie by ID | ❌ |
-| POST | `/api/movies` | Create movie | ✅ Admin |
-| PUT | `/api/movies/{id}` | Update movie | ✅ Admin |
-| DELETE | `/api/movies/{id}` | Delete movie | ✅ Admin |
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/api/movies` | List movies (with filters) |
+| GET | `/api/movies/featured` | Get featured movie |
+| GET | `/api/movies/trending` | Get trending movies |
+| GET | `/api/movies/{id}` | Get movie by ID |
+| POST | `/api/movies` | Create movie (admin) |
+| PUT | `/api/movies/{id}` | Update movie (admin) |
+| DELETE | `/api/movies/{id}` | Delete movie (admin) |
 
 ### Review Endpoints
-| Method | Endpoint | Description | Auth |
-|--------|----------|-------------|------|
-| GET | `/api/reviews?movie_id={id}` | List reviews | ❌ |
-| POST | `/api/reviews` | Create/update review | ✅ |
-| DELETE | `/api/reviews/{id}` | Delete review | ✅ |
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/api/reviews?movie_id={id}` | List reviews |
+| POST | `/api/reviews` | Create/update review |
+| DELETE | `/api/reviews/{id}` | Delete review |
 
 ### Category Endpoints
-| Method | Endpoint | Description | Auth |
-|--------|----------|-------------|------|
-| GET | `/api/categories` | List all categories | ❌ |
-| POST | `/api/categories` | Create category | ✅ Admin |
-| PUT | `/api/categories/{id}` | Update category | ✅ Admin |
-| DELETE | `/api/categories/{id}` | Delete category | ✅ Admin |
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/api/categories` | List all categories |
+| POST | `/api/categories` | Create category (admin) |
+| PUT | `/api/categories/{id}` | Update category (admin) |
+| DELETE | `/api/categories/{id}` | Delete category (admin) |
 
 ### Watchlist Endpoints
-| Method | Endpoint | Description | Auth |
-|--------|----------|-------------|------|
-| GET | `/api/watchlist` | Get user's watchlist | ✅ |
-| POST | `/api/watchlist` | Add to watchlist | ✅ |
-| DELETE | `/api/watchlist/{movie_id}` | Remove from watchlist | ✅ |
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/api/watchlist` | Get user's watchlist |
+| POST | `/api/watchlist` | Add to watchlist |
+| DELETE | `/api/watchlist/{movie_id}` | Remove from watchlist |
 
 ### Admin Endpoints
-| Method | Endpoint | Description | Auth |
-|--------|----------|-------------|------|
-| GET | `/api/admin/stats` | Dashboard statistics | ✅ Admin |
-| GET | `/api/admin/users` | List users | ✅ Admin |
-| POST | `/api/admin/users` | Create user | ✅ Admin |
-| PUT | `/api/admin/users/{id}` | Update user | ✅ Admin |
-| DELETE | `/api/admin/users/{id}` | Delete user | ✅ Admin |
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/api/admin/stats` | Dashboard statistics |
+| GET | `/api/admin/users` | List users |
+| POST | `/api/admin/users` | Create user |
+| PUT | `/api/admin/users/{id}` | Update user |
+| DELETE | `/api/admin/users/{id}` | Delete user |
 
 ---
 
@@ -231,7 +267,6 @@ CineVerse/
 - ✅ Rate movies (1-5 stars)
 - ✅ Create and manage watchlist
 - ✅ Update profile information
-- ✅ View streaming availability
 
 ### 👨💼 Admin User
 - ✅ All user permissions
@@ -241,7 +276,6 @@ CineVerse/
 - ✅ View dashboard statistics
 - ✅ Manage streaming platforms
 - ✅ Perform bulk operations
-- ✅ Moderate reviews
 
 ---
 
@@ -250,23 +284,23 @@ CineVerse/
 ### Frontend
 | Technology | Version | Purpose |
 |-----------|---------|---------|
-| **React** | 18 | UI framework |
-| **TypeScript** | 5.0+ | Type safety |
-| **Vite** | 6.0+ | Build tool & dev server |
-| **React Router** | 7 | Client-side routing |
-| **Tailwind CSS** | 4.0 | Styling |
-| **shadcn/ui** | Latest | UI components |
-| **Lucide Icons** | Latest | Icon library |
-| **Sonner** | Latest | Toast notifications |
+| React | 18 | UI framework |
+| TypeScript | 5.0+ | Type safety |
+| Vite | 6.0+ | Build tool |
+| React Router | 7 | Routing |
+| Tailwind CSS | 4.0 | Styling |
+| shadcn/ui | Latest | Components |
+| Lucide Icons | Latest | Icons |
+| Sonner | Latest | Notifications |
 
 ### Backend
 | Technology | Version | Purpose |
 |-----------|---------|---------|
-| **PHP** | 8.0+ | Server-side language |
-| **MySQL** | 8.0+ | Database |
-| **PDO** | Built-in | Database abstraction |
-| **bcrypt** | Built-in | Password hashing |
-| **Apache** | 2.4+ | Web server |
+| PHP | 8.0+ | Server language |
+| MySQL | 8.0+ | Database |
+| PDO | Built-in | DB abstraction |
+| bcrypt | Built-in | Password hashing |
+| Apache | 2.4+ | Web server |
 
 ---
 
@@ -275,7 +309,7 @@ CineVerse/
 - 🔐 **Password Hashing** - bcrypt for secure password storage
 - 🛡️ **SQL Injection Prevention** - Prepared statements with PDO
 - 🔑 **CSRF Protection** - Session-based tokens
-- 📁 **File Validation** - Secure file upload handling with type checking
+- 📁 **File Validation** - Secure file upload handling
 - 👮 **Role-Based Access Control** - Permission-based operations
 - 🧹 **Input Sanitization** - Clean user inputs
 - 🔒 **Session Security** - Secure session management
@@ -286,22 +320,20 @@ CineVerse/
 ## 📊 Database Schema
 
 ### Tables (8 Total)
-| Table | Purpose |
-|-------|---------|
-| **users** | User accounts and profiles |
-| **movies** | Movie information and metadata |
-| **categories** | Movie genres/categories |
-| **platforms** | Streaming platforms (Netflix, Prime, etc.) |
-| **reviews** | User reviews and ratings |
-| **watchlist** | User watchlist items |
-| **movie_categories** | Movie-category relationships |
-| **movie_platforms** | Movie-platform availability |
+- **users** - User accounts and profiles
+- **movies** - Movie information
+- **categories** - Movie genres
+- **platforms** - Streaming platforms
+- **reviews** - User reviews and ratings
+- **watchlist** - User watchlist items
+- **movie_categories** - Movie-category relationships
+- **movie_platforms** - Movie-platform availability
 
 ### Pre-seeded Data
-- 1 admin user (`admin@cineverse.com`)
-- 10 movie categories (Action, Drama, Comedy, etc.)
-- 5 streaming platforms (Netflix, Amazon Prime, Disney+, HBO Max, Hulu)
-- 6 sample movies with complete relationships
+- 1 admin user
+- 10 movie categories
+- 5 streaming platforms
+- 6 sample movies with relationships
 
 ---
 
@@ -317,16 +349,10 @@ define('DB_NAME', 'cineverse');
 ```
 
 ### Environment Variables
-Create `.env` file in root:
+Create `.env` file:
 ```env
 VITE_API_URL=http://localhost
 VITE_APP_NAME=CineVerse
-```
-
-### File Permissions
-```bash
-# Windows (run as administrator)
-icacls "c:\xampp\htdocs\public\uploads" /grant Everyone:F /T
 ```
 
 ---
@@ -337,30 +363,21 @@ icacls "c:\xampp\htdocs\public\uploads" /grant Everyone:F /T
 - ✅ Ensure MySQL is running in XAMPP
 - ✅ Check credentials in `backend/config/db.php`
 - ✅ Verify `cineverse` database exists
-- ✅ Check MySQL port (default: 3306)
 
 ### File Upload Errors
 - ✅ Check folder permissions on `public/uploads/`
 - ✅ Verify PHP `upload_max_filesize` in php.ini
 - ✅ Ensure write permissions on upload directories
-- ✅ Check file size limits (default: 5MB)
 
 ### API 404 Errors
 - ✅ Verify `.htaccess` is in root directory
 - ✅ Enable `mod_rewrite` in Apache
 - ✅ Check Apache DocumentRoot configuration
-- ✅ Verify API endpoint URLs
 
 ### CORS Issues
 - ✅ Verify Vite proxy in `vite.config.ts`
 - ✅ Check backend CORS headers
 - ✅ Ensure correct origin in requests
-- ✅ Check browser console for errors
-
-### Frontend Build Issues
-- ✅ Clear `node_modules` and reinstall: `rm -rf node_modules && npm install`
-- ✅ Clear Vite cache: `rm -rf dist`
-- ✅ Check Node.js version: `node --version` (should be 18+)
 
 ---
 
@@ -377,22 +394,11 @@ npm run build
 # Access via http://localhost/
 ```
 
-### Docker Deployment (Optional)
-```bash
-# Build Docker image
-docker build -t cineverse .
-
-# Run container
-docker run -p 80:80 -p 3306:3306 cineverse
-```
-
 ---
 
 ## 📄 License
 
 This project is open source and available under the **MIT License**.
-
-See [LICENSE](LICENSE) file for details.
 
 ---
 
@@ -400,25 +406,17 @@ See [LICENSE](LICENSE) file for details.
 
 Contributions, issues, and feature requests are welcome!
 
-### How to Contribute
 1. Fork the repository
 2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
 3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-### Development Guidelines
-- Follow existing code style
-- Add tests for new features
-- Update documentation
-- Keep commits atomic and descriptive
-
 ---
 
-## 📧 Support & Contact
+## 📧 Support
 
 - **Issues**: [GitHub Issues](https://github.com/Venkata-Sai-Vishwas-Patnala/CineVerse-CMS-PHP/issues)
-- **Email**: support@cineverse.com
 - **Author**: [Venkata Sai Vishwas Patnala](https://github.com/Venkata-Sai-Vishwas-Patnala)
 
 ---
@@ -427,31 +425,10 @@ Contributions, issues, and feature requests are welcome!
 
 - Built with ❤️ for movie enthusiasts
 - Inspired by modern streaming platforms
-- Thanks to all contributors and supporters
-- Special thanks to the React, PHP, and open-source communities
-
----
-
-## 📈 Project Statistics
-
-- **Total Files**: 500+
-- **Lines of Code**: 10,000+
-- **API Endpoints**: 30+
-- **Database Tables**: 8
-- **Components**: 20+
-- **Pages**: 6
+- Thanks to all contributors
 
 ---
 
 **Made with ❤️ by [Venkata Sai Vishwas Patnala](https://github.com/Venkata-Sai-Vishwas-Patnala)**
 
 ⭐ If you find this project helpful, please consider giving it a star!
-
----
-
-## 🔗 Quick Links
-
-- [GitHub Repository](https://github.com/Venkata-Sai-Vishwas-Patnala/CineVerse-CMS-PHP)
-- [Live Demo](http://localhost/)
-- [API Documentation](./API.md)
-- [Contributing Guide](./CONTRIBUTING.md)
