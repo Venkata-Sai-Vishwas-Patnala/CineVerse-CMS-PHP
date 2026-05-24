@@ -2,6 +2,7 @@
 
 > A modern, feature-rich movie review and content management system built with cutting-edge technologies.
 
+![Figma](https://img.shields.io/badge/Designed%20In-Figma-black?logo=figma)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![React](https://img.shields.io/badge/React-18-blue?logo=react)](https://react.dev)
 [![PHP](https://img.shields.io/badge/PHP-8.0+-purple?logo=php)](https://www.php.net)
